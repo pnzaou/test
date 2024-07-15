@@ -14,10 +14,7 @@ app.get('/', (req, res)=>{
 })
 
 const router = require('./src/routes/index')
-const db  = require('./src/db/db')
 app.use(router)
-
-db.connexion()
 
 app.listen(port, () => {
   console.log(`Server tourne sur : http://localhost:${port}`);
